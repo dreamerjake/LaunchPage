@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<title> JakeLaunch! </title>
+<head>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+    <link rel="shortcut icon" href="http://sstatic.net/stackoverflow/img/favicon.ico">
+	<h1 style="text-align:center; color:white"> JakeLaunch! </h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type='text/javascript' src='scripts.js'></script>
+</head>
+
+<body> <!-- Page Background Set Here -->
+
+<!-- Launch Button Table -->
+<div id="launchtable">
+    <table align="center" border="5px" cellspacing="10" cellpadding="0">
+        <thead></thead>
+        <tbody>
+            <tr class="launchButtons">
+                <!-- Google Calendar Launch -->
+            	<td><a href = "https://calendar.google.com/calendar/render#main_7"> <img class="launchButton" src="http://i3.photobucket.com/albums/y90/DreamerJake/Lauch%20Icons/Google-Calendar-icon_zpsqylrvgqg.png"></a></td>
+                <!-- Memrise Launch -->
+                <td><a href = "http://www.memrise.com/home/"> <img class="launchButton" src="http://i3.photobucket.com/albums/y90/DreamerJake/Lauch%20Icons/74f21c2c-36b7-4b05-90e9-60848fa9b985_zpsxtk6wmei.png"></a></td>
+                <!-- Habitica Launch -->
+                <td><a href = "https://habitica.com/#/tasks"> <img class="launchButton" src="http://i3.photobucket.com/albums/y90/DreamerJake/Lauch%20Icons/33a203d8-6649-4429-95d6-fb4d5f46879b_zpsehsvjajw.png"></a></td>
+                <!-- MyFitnessPal Launch -->
+                <td><a href = "http://www.myfitnesspal.com/"> <img class="launchButton" src="http://i3.photobucket.com/albums/y90/DreamerJake/Lauch%20Icons/myfitnesspal201_zpsyczra1xy.jpg"></a></td> 
+                <!-- DuoLingo Launch -->
+                <td><a href = "https://www.duolingo.com/"> <img class="launchButton" src="http://i3.photobucket.com/albums/y90/DreamerJake/Lauch%20Icons/5428cf5f-aa57-4eb4-8897-89f0b0faa871_zpsimjnxoc9.png"></a></td>
+                <!-- Google Drive Launch -->
+                <td><a href = "https://drive.google.com/drive/my-drive"> <img class="launchButton" src="http://i3.photobucket.com/albums/y90/DreamerJake/Lauch%20Icons/27e9dd89-ea12-4254-a501-48c6335150d0_zpso36kpsmn.jpg"></a></td> 
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Clock Feature -->
+<div id="clockDisplay" style="text-align:center; color: white; font-size: 140px; font-family: impact"><strong>00:00</strong></div>
+
+<!-- Clock JAVASCRIPT starts here ------------------------------------------------------ -->
+<script type="text/javascript" language="JavaScript">
+
+function renderTime() {
+    var currentTime = new Date () ;
+    var h = currentTime.getHours() ;
+    var m = currentTime.getMinutes() ;
+
+    if(h < 10) {
+        h = "0" + h;
+    }
+    if(m < 10) {
+        m = "0" + m;
+    }
+
+    var myClock = document.getElementById('clockDisplay');
+    myClock.textContent = h + ":" + m;
+
+}
+window.onload = renderTime;
+setInterval(renderTime ,1000) ;
+
+</script>
+<!-- Clock JAVASCRIPT ends here ------------------------------------------------------- -->
+
+<!-- Dropdown Menus -->
+<div class="click-nav">
+  <ul class="no-js">
+    <li>
+      <a href="#" class="clicker"><img src="icons/youtube.ico" alt="Icon">Motivation</a>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=emHAoQGoQic"><img src="icons/youtube.ico" alt="Icon">Alan Watts - The Mind</a></li>
+        <!-- <li><a href="#"><img src="img/i-3.png" alt="Icon">Settings</a></li>
+        <li><a href="#"><img src="img/i-4.png" alt="Icon">Privacy</a></li>
+        <li><a href="#"><img src="img/i-5.png" alt="Icon">Help</a></li>
+        <li><a href="#"><img src="img/i-6.png" alt="Icon">Sign out</a></li> -->
+      </ul>
+    </li>
+  </ul>
+</div>
+
+</body>
+
+
+
+</html>
