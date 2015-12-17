@@ -1,0 +1,20 @@
+var defaultImage = "http://...";
+    document.getElementsByTagName('body')[0].style.backgroundImage = localStorage.getItem('back') ? "url('"+localStorage.getItem('back')+"')" : "url('"+defaultImage+"')";
+  function changebackground(){
+      var url =  document.getElementById('bgchanger').value;
+      document.getElementsByTagName('body')[0].style.backgroundImage = "url('" + url + "')";
+      localStorage.setItem('back',url);
+    }
+
+
+
+    if(typeof($.cookie('background_image')) != 'undefined'){
+    var users_old_back_ground = $.cookie('background_image');
+    $('body').css ({ "background-image" : "url('" + users_old_back_ground + "')"}); //jquery : selecting the body tag ...then using css() to set the bg
+	}else{
+    // do something else because the user doesnt have the cookie 
+	}
+
+
+  //Random background example
+  http://i414.photobucket.com/albums/pp229/Thedarksinisterwolf/sci-fi-planet-rise-wallpaper-background-x-id-249342.jpg
